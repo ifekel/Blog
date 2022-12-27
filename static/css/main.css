@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header Section */
+header {
+    background-color: #05BAD2;
+    display: flex;
+    width: 100vw;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blogMenuBar {
+    display: flex;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 50px;
+    align-items: center;
+    margin-top: 14px;
+    border-radius: 84px;
+    width: 27%;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+.blogMenuBar li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+    opacity: 1;
+}
+
+.blogMenuBar li a:hover {
+    color: red;
+}
+
+header h2 a {
+    font-family: rockwell;
+    font-size: 32px;
+    font-weight: 700;
+    padding-left: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Blof Body Section */
+
+.post {
+    box-shadow: 0 4px 14px 2px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.post-info h2 {
+    font-size: 40px;
+    font-family: bree serif;
+}
+
+.post p {
+    font-size: 18px;
+}
+
+.post-action .fa {
+    font-size: 20px;
+    color: white;
+    color: #05BAD2;
+}
+
+.post-action a {
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* messages-sections */
+.messages-sections h2 {
+    font-size: 35px;
+    font-family:  rockwell;
+    font-weight: 700;
+}
+
+.messages-sections {
+    background-color: #626262;
+}
+
+.messages {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+}
+
+.messages-action {
+    justify-content: end;
+    display: flex;
+}
+
+.messages-action a {
+    color: white;
+}
+
+.messages-action {
+    gap: 10px;
+}
+
+.messages h3 {
+    font-weight: 800;
+}
+
+.messages h5 {
+    font-weight: 700;
+}
+
+.footer {
+    height: 200px;
+}
+
+/* ABOUT SECTION */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.about-content {
+    width: 50%;
+    background-color: #05BAD2;
+}
+
+.about-img img{
+    width: 100%;
+}
+
+.about-text {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-text h2 {
+    font-family: bree serif;
+    font-weight: 700;
+}
+
+.about-text p {
+    font-size: 20px;
+    font-family: rockwell;
+}
+
+.about-links p a{
+    font-size: 27px;
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony's - Blog</title>
+
+    <!-- Bootstrap assets -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <!-- Icon assets -->
+    <link rel="stylesheet" href="{% static 'Font-awesome/css/all.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <header id="header">
+        <h2><a href="{% url 'index' %}">Tony's blog</a></h2>
+
+        <ul class="blogMenuBar">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="#">Recents</a></li>
+            <li><a href="#">Comments</a></li>
+        </ul>
+    </header>
+
+    <!-- Blog Body section -->
+    <section class="blogBody">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 p-4">
+                    <div class="row gy-4">
+                        <div class="col-lg-12 post">
+                            <div class="post-info d-flex justify-content-between">
+                                <a href="#">
+                                    <h2>{{ post.header }}</h2>
+                                </a>
+                                <h5>{{ post.date_created }}</h5>
+                            </div>
+                            <p>{{ post.body }}</p>
+                            <div class="post-action">
+                                <a href="#"><i class="fa fa-comment"></i>0</a>
+                                <a href="#"><i class="fa fa-heart"></i>0</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-dark fixed-bottom">
+
+    </footer>
+</body>
+</html>

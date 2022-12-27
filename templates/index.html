@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony's - Blog</title>
+
+    <!-- Bootstrap assets -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <!-- Icon assets -->
+    <link rel="stylesheet" href="{% static 'Font-awesome/css/all.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <header id="header">
+        <h2><a href="{% url 'index' %}">Tony's blog</a></h2>
+
+        <ul class="blogMenuBar">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="#">Recents</a></li>
+            <li><a href="#">Comments</a></li>
+        </ul>
+    </header>
+
+    <!-- Blog Body section -->
+    <section class="blogBody">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 p-4">
+                    <div class="row gy-4">
+                        {% for post in posts reversed %}
+                        <div class="col-lg-12 post">
+                            <div class="post-info d-flex justify-content-between">
+                                <a href="/post/{{post.id}}">
+                                    <h2>{{ post.header }}</h2>
+                                </a>
+                                <h5>{{ post.date_created }}</h5>
+                            </div>
+                            <p>{{ post.body|truncatewords:17 }}</p>
+                            <div class="post-action">
+                                <a href="#"><i class="fa fa-comment"></i>0</a>
+                                <a href="#"><i class="fa fa-heart"></i>0</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="col-lg-4 p-2 messages-sections">
+                    <h2 class="text-white">Messages</h2>
+
+                    <div class="row p-4 gy-3">
+                        <div class="messages col-lg-12 p-3">
+                            <div class="messages-info d-flex justify-content-between">
+                                <h3>Onyekwelu Ifeanyi</h3>
+                                <h5>25 December 2022</h5>
+                            </div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, possimus ipsum? Distinctio cum est autem culpa asperiores voluptate recusandae possimus.</p>
+                            <div class="messages-action">
+                                <p><a href="#"><i class="fa fa-comment"></i>0</a></p>
+                                <p><a href="#"><i class="fa fa-heart"></i>0</a></p>
+                            </div>
+                        </div>
+
+                        <div class="messages col-lg-12 p-3">
+                            <div class="messages-info d-flex justify-content-between">
+                                <h3>Onyekwelu Ifeanyi</h3>
+                                <h5>25 December 2022</h5>
+                            </div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, possimus ipsum? Distinctio cum est autem culpa asperiores voluptate recusandae possimus.</p>
+                            <div class="messages-action">
+                                <p><a href="#"><i class="fa fa-comment"></i>0</a></p>
+                                <p><a href="#"><i class="fa fa-heart"></i>0</a></p>
+                            </div>
+                        </div>
+
+                        <div class="messages col-lg-12 p-3">
+                            <div class="messages-info d-flex justify-content-between">
+                                <h3>Onyekwelu Ifeanyi</h3>
+                                <h5>25 December 2022</h5>
+                            </div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, possimus ipsum? Distinctio cum est autem culpa asperiores voluptate recusandae possimus.</p>
+                            <div class="messages-action">
+                                <p><a href="#"><i class="fa fa-comment"></i>0</a></p>
+                                <p><a href="#"><i class="fa fa-heart"></i>0</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+
+    <footer class="footer bg-dark">
+
+    </footer>
+</body>
+</html>
